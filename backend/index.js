@@ -7,7 +7,7 @@ import authentication from "./routes/auth.js";
 import messages from "./routes/message.js";
 import sideBarUsers from "./routes/sideBarUsers.js"
 
-import connectToMongodb from "./db/connectToMongoDb.js";
+import connectToMongodb from "./db/connectToMongoDB.js";
 import { app, server, io } from "./socket/socket.js";
 
 const port = process.env.PORT || 8000 ;
