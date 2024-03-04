@@ -1,0 +1,41 @@
+# Node.js dependencies
+node_modules/
+
+# Generated files
+build/
+dist/
+*.log
+*.tmp
+
+# React build output
+*.env
+*.env.local
+.env.production
+.env.development
+.env.test
+.env.prod
+.env.dev
+.env.staging
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+
+# Other specific files
+*.class
+*.jar
+*.war
+*.ear
+*.dll
+*.exe
+
+# Environment variables
+.env
