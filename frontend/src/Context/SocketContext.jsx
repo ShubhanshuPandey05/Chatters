@@ -16,7 +16,7 @@ export const SocketContextProvider = ({children}) => {
     // Connect to the server.
     useEffect(()=>{
         if (isAuthenticated) {
-            const socket = io("http://localhost:8000",{
+            const socket = io("https://chatters-svk4.onrender.com",{
                 query:{
                     userId :  isAuthenticated._id
                 }
