@@ -8,14 +8,14 @@ export default function SearchUser() {
     const {setSelectedUser} = useUser();
     const {User} = useConversation();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (!search) return;
         if (search.length < 3) {
             toast.error("Please enter at least 3 characters");
             return;
         }
-        const searchedUser = User.find((c) =>  c.userName.toLowerCase().includes(search.toLowerCase()));
+        const searchedUser = await User.find((c) =>  c.userName.toLowerCase().includes(search.toLowerCase()));
         if(!searchedUser){
             toast.error(`No user found with the name "${search}"`);
         }else{
