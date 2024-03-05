@@ -1,13 +1,13 @@
 import { useSocketContext } from "../Context/SocketContext";
 import useUser from "../zustand/useUser";
 
-const Users = ({ conversation, lastIdx }) => {
+const Users = async ({ conversation, lastIdx }) => {
     const { selectedUser, setSelectedUser } = useUser();
 
     const isSelected = selectedUser?._id === conversation._id;
 
     
-    const {onlineUser} = useSocketContext();
+    const {onlineUser} = await useSocketContext();
     const isOnline = onlineUser.includes(conversation._id)
     return (
         <>
