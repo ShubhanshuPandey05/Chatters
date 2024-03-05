@@ -10,7 +10,7 @@ export const useSocketContext = () =>{
 
 export const SocketContextProvider = ({children}) => {
     const [socket, setSocket] = useState(null);
-    const [onlineUser,setOnlineUser] = useState({});
+    const [onlineUser,setOnlineUser] = useState([]);
     const {isAuthenticated} = useAuthContext();
     
     // Connect to the server.
