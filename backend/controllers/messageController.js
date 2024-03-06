@@ -33,12 +33,12 @@ export const sendMessage = async (req, res) => {
         // await conversation.save();
         // await newMessage.save();
 
+        await Promise.all([conversation.save(),newMessage.save()]);
         const receiverSocketId = getReceiverSocketId(receiverId);
         
         if (receiverSocketId) {
             io.to(receiverSocketId).emit('newMessage',newMessage)
         }
-        await Promise.all([conversation.save(),newMessage.save()]);
 
 
         res.status(201).json(newMessage);
