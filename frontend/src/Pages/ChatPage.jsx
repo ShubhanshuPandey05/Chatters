@@ -14,7 +14,7 @@ export default function ChatPage() {
                 <SideBar/>
                 <Conversations/>
             </div>
-            <img src="./assets/Logo.png" alt="" className='absolute z-10 bottom-2 w-56 center'/>
+            <img src="./assets/Logo.png" alt="" className='absolute z-10 bottom-0 lg:bottom-2 w-40 lg:w-56 center'/>
         </>
     )
 }
